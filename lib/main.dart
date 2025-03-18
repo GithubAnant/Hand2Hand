@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hand2hand/onboarding_screen.dart';
+import 'package:hand2hand/landing_page.dart';
 
 void main(){
   runApp(Hand2Hand());
@@ -13,7 +13,7 @@ class Hand2Hand extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home: LandingPage(),
     );
   }
 }
