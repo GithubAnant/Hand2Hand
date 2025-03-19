@@ -3,8 +3,11 @@ import 'package:hand2hand/donate_what.dart';
 
 class DonateNowCard extends StatelessWidget {
   const DonateNowCard({
-    super.key,
+    super.key, required this.displayText, required this.displayTextButton,
   });
+
+  final String displayText;
+  final String displayTextButton;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +41,7 @@ class DonateNowCard extends StatelessWidget {
                   bottom: 5,
                 ),
                 child: Text(
-                  'Change The World With Your Help',
+                  displayText,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
@@ -64,7 +67,7 @@ class DonateNowCard extends StatelessWidget {
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
                 ),
-                child: Text('Donate Now'),
+                child: Text(displayTextButton),
               ),
             ],
           ),

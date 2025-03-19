@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hand2hand/donate_now_card.dart';
-import 'package:hand2hand/heading_title.dart';
+import 'package:hand2hand/elements/donate_now_card.dart';
+import 'package:hand2hand/elements/heading_title.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -100,7 +100,7 @@ class _LandingPageState extends State<LandingPage> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.85,
                     height: MediaQuery.of(context).size.width * 0.45,
-                    child: DonateNowCard(),
+                    child: DonateNowCard(displayText: 'Change The World With Your Help', displayTextButton: 'Donate Now',),
                   ),
                 ),
                 SizedBox(height: 30),
