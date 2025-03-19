@@ -78,4 +78,3 @@ class YourImpact extends StatelessWidget {
 
 
 
-// not used anywhere yet

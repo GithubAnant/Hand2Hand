@@ -71,7 +71,20 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: HeadingTitleName(username: username)),
+      drawer: Drawer(),
+      appBar: AppBar(
+        leading: Builder(
+          builder:
+              (context) => IconButton(
+                icon: Icon(Icons.menu), // Add an icon (menu or any other)
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+              ),
+        ),
+
+        title: HeadingTitleName(username: username),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -107,13 +120,13 @@ class _LandingPageState extends State<LandingPage> {
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          Text('Most Money', style: TextStyle(fontSize: 17),),
+          Text('Most Money', style: TextStyle(fontSize: 17)),
           SizedBox(height: MediaQuery.of(context).size.height * 0.005),
 
           // Top Donors ListView
           ListViewDonorsTop(donorsWhat: donorsMoney),
           SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          Text('Most Meals', style: TextStyle(fontSize: 17),),
+          Text('Most Meals', style: TextStyle(fontSize: 17)),
           SizedBox(height: MediaQuery.of(context).size.height * 0.005),
           ListViewDonorsTop(donorsWhat: donorsMeals),
         ],
