@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
 import 'package:hand2hand/elements/your_impact.dart';
-import 'package:hand2hand/profile.dart';
+import 'package:hand2hand/elements/profile.dart';
 
 class NgoLandingPage extends StatefulWidget {
   const NgoLandingPage({super.key});
@@ -23,7 +23,7 @@ class _NgoLandingPageState extends State<NgoLandingPage> {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Profile())); // Calls Profile() when tapped
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(username: 'Anant', gmailId: 'anant@gmail.com', cityName: 'Islamabad'))); // Calls Profile() when tapped
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +32,7 @@ class _NgoLandingPageState extends State<NgoLandingPage> {
                   SizedBox(width: 8), 
                   Text('Your Profile', style: TextStyle(fontSize: 20),),
                 ],
-              ),
+              ),  
             ),
           ],
         ),

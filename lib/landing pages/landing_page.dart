@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
-import 'package:hand2hand/profile.dart';
+import 'package:hand2hand/elements/profile.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -78,7 +78,7 @@ class _LandingPageState extends State<LandingPage> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profile())); // Calls Profile() when tapped
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(username: 'Anant', gmailId: 'anant@gmail.com', cityName: 'Islamabad',))); // Calls Profile() when tapped
                 },
                 child: Row(
                   children: [
