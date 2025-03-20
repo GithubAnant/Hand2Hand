@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
+import 'package:hand2hand/profile.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -71,7 +72,27 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Center(
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profile())); // Calls Profile() when tapped
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.person_pin),
+                    SizedBox(width: 8), // Adds spacing between icon and text
+                    Text('Profile'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+
       appBar: AppBar(
         leading: Builder(
           builder:
@@ -100,7 +121,10 @@ class _LandingPageState extends State<LandingPage> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.85,
                     height: MediaQuery.of(context).size.width * 0.45,
-                    child: DonateNowCard(displayText: 'Change The World With Your Help', displayTextButton: 'Donate Now',),
+                    child: DonateNowCard(
+                      displayText: 'Change The World With Your Help',
+                      displayTextButton: 'Donate Now',
+                    ),
                   ),
                 ),
                 SizedBox(height: 30),

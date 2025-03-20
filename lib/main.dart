@@ -1,7 +1,9 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
-// ignore: unused_import
 import 'package:hand2hand/landing%20pages/landing_page.dart';
 import 'package:hand2hand/landing%20pages/ngo_landing_page.dart';
+import 'package:hand2hand/profile.dart';
 
 void main(){
   runApp(Hand2Hand());
