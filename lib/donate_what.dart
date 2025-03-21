@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hand2hand/donate_food_page.dart';
-import 'package:hand2hand/donate_misc_page.dart';
-import 'package:hand2hand/donate_money_page.dart';
+import 'package:hand2hand/donate%20items/donate_food_page.dart';
+import 'package:hand2hand/donate%20items/donate_misc_page.dart';
+import 'package:hand2hand/donate%20items/donate_money_page.dart';
 
 class DonateWhat extends StatefulWidget {
   const DonateWhat({super.key});
