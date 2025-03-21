@@ -73,25 +73,35 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        child: Center(
-          child: Column(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(username: 'Anant', gmailId: 'anant@gmail.com', cityName: 'Islamabad',))); // Calls Profile() when tapped
-                },
-                child: Row(
-                  children: [
-                    Icon(Icons.person_pin),
-                    SizedBox(width: 8), // Adds spacing between icon and text
-                    Text('Profile'),
-                  ],
-                ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => ProfilePage(
+                          username: 'Anant',
+                          gmailId: 'anant@gmail.com',
+                          cityName: 'Islamabad',
+                        ),
+                  ),
+                ); // Calls Profile() when tapped
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.person_pin, size: 40),
+                  SizedBox(width: 8),
+                  Text('Your Profile', style: TextStyle(fontSize: 20)),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ),
+      ), 
 
       appBar: AppBar(
         leading: Builder(

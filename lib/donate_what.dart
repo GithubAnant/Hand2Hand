@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hand2hand/donate_food_page.dart';
+import 'package:hand2hand/donate_misc_page.dart';
+import 'package:hand2hand/donate_money_page.dart';
 
 class DonateWhat extends StatefulWidget {
   const DonateWhat({super.key});
@@ -9,10 +12,11 @@ class DonateWhat extends StatefulWidget {
 
 class _DonateWhatState extends State<DonateWhat> {
   final List<Map<String, dynamic>> options = [
-    {"name": "Money", "image": "assets/images/image.jpg"},
-    {"name": "Food", "image": "assets/images/image1.png"},
-    {"name": "Miscellaneous", "image": "assets/images/image2.png"},
+    {"name": "Money", "image": "assets/images/image.jpg", "nameOfWidget": DonateMoneyPage()},
+    {"name": "Food", "image": "assets/images/image1.png", "nameOfWidget": FoodDonationPage()},
+    {"name": "Miscellaneous", "image": "assets/images/image2.png", "nameOfWidget": MiscellaneousDonationPage()},
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,19 +58,25 @@ class _DonateWhatState extends State<DonateWhat> {
                   itemCount: options.length,
                   itemBuilder: (context, index) {
                     return GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                      
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => options[index]['nameOfWidget']),
+                          );
+                        
+                      },
                       child: Container(
                         margin: EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: const Color.fromARGB(79, 145, 165, 142),
-                          
                         ),
                         child: Column(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
-                              child: Image.asset(options[index]['image'], fit: BoxFit.cover, height: MediaQuery.of(context).size.height*0.3),
+                              child: Image.asset(options[index]['image'], fit: BoxFit.cover, height: MediaQuery.of(context).size.height * 0.3),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(12.0),
@@ -82,7 +92,14 @@ class _DonateWhatState extends State<DonateWhat> {
                                   ),
                                   SizedBox(height: 10),
                                   OutlinedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => options[index]['nameOfWidget']),
+                                        );
+                                      
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.white,
                                       foregroundColor: Colors.black,
@@ -106,8 +123,3 @@ class _DonateWhatState extends State<DonateWhat> {
     );
   }
 }
-
-
-
-
-// this is used in landing_page.dart under the donate now button
