@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hand2hand/landing%20pages/landing_page.dart';
 import 'package:hand2hand/landing%20pages/ngo_landing_page.dart';
 import 'package:hand2hand/elements/profile.dart';
+import 'package:hand2hand/thankyou_page.dart';
 
 void main(){
   runApp(Hand2Hand());
@@ -17,7 +18,7 @@ class Hand2Hand extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      home: NgoLandingPage(),
+      home: LandingPage(),
     );
   }
 }
