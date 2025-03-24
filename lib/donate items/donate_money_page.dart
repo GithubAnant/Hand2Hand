@@ -70,7 +70,15 @@ class _DonateMoneyPageState extends State<DonateMoneyPage> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                
+                showModalBottomSheet(context: context, builder: (context) {
+                  return Container(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    height: MediaQuery.of(context).size.height*0.4,
+                    child: GestureDetector(
+                      onTap: openDonationPage,
+                      child: Image.asset('assets/images/money.jpeg')),
+                  );
+                });
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
