@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hand2hand/thankyou_page.dart';
 
 class MiscellaneousDonationPage extends StatefulWidget {
   const MiscellaneousDonationPage({super.key});
@@ -21,12 +22,8 @@ class _MiscellaneousDonationPageState extends State<MiscellaneousDonationPage> {
   ];
 
   void submitDonation() {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState!.save();
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Donation submitted: $weight of $selectedItem')),
-      );
-    }
+
+   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ThankyouPage()));
   }
 
   @override
