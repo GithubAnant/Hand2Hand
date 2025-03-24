@@ -22,7 +22,6 @@ class _MiscellaneousDonationPageState extends State<MiscellaneousDonationPage> {
   ];
 
   void submitDonation() {
-
    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ThankyouPage()));
   }
 
