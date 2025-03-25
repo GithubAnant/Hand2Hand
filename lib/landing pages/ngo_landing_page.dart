@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
+import 'package:hand2hand/elements/profile_ngo.dart';
 import 'package:hand2hand/elements/your_impact.dart';
-import 'package:hand2hand/elements/profile.dart';
+import 'package:hand2hand/elements/profile_user.dart';
 import 'package:hand2hand/transacting_meals.dart';
 import 'package:hand2hand/transaction_money.dart';
 
@@ -14,7 +15,7 @@ class NgoLandingPage extends StatefulWidget {
 }
 
 class _NgoLandingPageState extends State<NgoLandingPage> {
-  String ngoname = "Bridge Project";
+  String ngoname = "Helping Hands";
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class _NgoLandingPageState extends State<NgoLandingPage> {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(username: 'Anant', gmailId: 'anant@gmail.com', cityName: 'Islamabad'))); // Calls Profile() when tapped
+                Navigator.push(context, MaterialPageRoute(builder: (context) => NGOProfilePage())); // Calls Profile() when tapped
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

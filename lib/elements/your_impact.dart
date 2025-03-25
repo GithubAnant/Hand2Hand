@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hand2hand/donate_what.dart';
 
 class YourImpact extends StatelessWidget {
   const YourImpact({

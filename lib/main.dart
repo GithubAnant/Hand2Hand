@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/landing%20pages/landing_page.dart';
 import 'package:hand2hand/landing%20pages/ngo_landing_page.dart';
-import 'package:hand2hand/elements/profile.dart';
+import 'package:hand2hand/elements/profile_user.dart';
 import 'package:hand2hand/thankyou_page.dart';
 
 void main(){

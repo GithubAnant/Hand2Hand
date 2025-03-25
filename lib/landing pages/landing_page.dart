@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
-import 'package:hand2hand/elements/profile.dart';
+import 'package:hand2hand/elements/profile_user.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
