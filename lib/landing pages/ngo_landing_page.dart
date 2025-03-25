@@ -3,7 +3,6 @@ import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
 import 'package:hand2hand/elements/profile_ngo.dart';
 import 'package:hand2hand/elements/your_impact.dart';
-import 'package:hand2hand/elements/profile_user.dart';
 import 'package:hand2hand/transacting_meals.dart';
 import 'package:hand2hand/transaction_money.dart';
 
