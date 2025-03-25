@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hand2hand/donate_what.dart';
 import 'package:hand2hand/elements/your_impact.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -50,9 +51,9 @@ class _ProfilePageState extends State<ProfilePage> {
 
           SizedBox(height: 20),
 
-          YourImpact(heroText: '90 Meals', headingText: 'Meals Donated'),
+          YourImpact(heroText: '90 Meals', headingText: 'Meals Donated', detailsWidget: DonateWhat(),),
           SizedBox(height: MediaQuery.of(context).size.height * 0.015),
-          YourImpact(heroText: '₹6500', headingText: 'Funds Donated'),
+          YourImpact(heroText: '₹6500', headingText: 'Funds Donated', detailsWidget: DonateWhat(),),
 
           // Options List
           Expanded(

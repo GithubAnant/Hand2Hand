@@ -3,6 +3,8 @@ import 'package:hand2hand/elements/donate_now_card.dart';
 import 'package:hand2hand/elements/heading_title.dart';
 import 'package:hand2hand/elements/your_impact.dart';
 import 'package:hand2hand/elements/profile.dart';
+import 'package:hand2hand/transacting_meals.dart';
+import 'package:hand2hand/transaction_money.dart';
 
 class NgoLandingPage extends StatefulWidget {
   const NgoLandingPage({super.key});
@@ -87,9 +89,9 @@ class _NgoLandingPageState extends State<NgoLandingPage> {
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           // Text('Meals Provided', style: TextStyle(fontSize: 20)),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          YourImpact(heroText: '950 Meals Donated', headingText: 'Meals Provided',),
+          YourImpact(heroText: '950 Meals Donated', headingText: 'Meals Provided', detailsWidget: TransactionMeals(),),
           SizedBox(height: MediaQuery.of(context).size.height * 0.015),
-          YourImpact(heroText: '₹65000 Secured', headingText: 'Funds Raised',)
+          YourImpact(heroText: '₹65000 Secured', headingText: 'Funds Raised', detailsWidget: TransactionPage(),)
         ],
       ),
     );

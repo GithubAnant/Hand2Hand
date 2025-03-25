@@ -5,11 +5,12 @@ class YourImpact extends StatelessWidget {
   const YourImpact({
     super.key,
     required this.heroText,
-    required this.headingText,
+    required this.headingText, required this.detailsWidget,
   });
 
   final String heroText;
   final String headingText;
+  final Widget detailsWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +71,7 @@ class YourImpact extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => DonateWhat()),
+                        MaterialPageRoute(builder: (context) => detailsWidget),
                       );
                     },
                     style: TextButton.styleFrom(
