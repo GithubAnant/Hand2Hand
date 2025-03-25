@@ -61,16 +61,7 @@ class _ProfilePageState extends State<ProfilePage> {
               padding: EdgeInsets.symmetric(horizontal: 20),
               children: [
                 SizedBox(height: 20),
-                ProfileOption(
-                  icon: Icons.lock,
-                  title: "Privacy Settings",
-                  onTap: () {},
-                ),
-                ProfileOption(
-                  icon: Icons.help,
-                  title: "Help & Support",
-                  onTap: () {},
-                ),
+                
               ],
             ),
           ),
