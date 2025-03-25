@@ -18,7 +18,7 @@ class Hand2Hand extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      home: NgoLandingPage(),
     );
   }
 }
