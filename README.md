@@ -99,6 +99,7 @@ lib/
    ```
 
 ## 🔄 Notification Flow (Simplified)
+
 ```mermaid
 graph TD
   A[Volunteer logs a donation] --> B[Save in 'donations']
@@ -127,7 +128,6 @@ Contains user profiles for both volunteers and NGOs.
 - `uid` (string)  
 - `updatedAt` (timestamp)
 
----
 
 ###  `donations`
 
@@ -140,7 +140,6 @@ Each document represents a donation posted by a user.
 - `timestamp` (timestamp)  
 - `userId` (string)
 
----
 
 ###  `notifications`
 
@@ -158,7 +157,6 @@ Tracks messages sent from volunteers to NGOs regarding donations.
 - `timestamp` (timestamp)  
 - `type` (string): e.g., `"food_donation"`, `"clothing_donation"`
 
----
 ## Contributing
 
 We welcome contributions from developers, NGOs, and tech-for-good enthusiasts!
@@ -167,9 +165,6 @@ We welcome contributions from developers, NGOs, and tech-for-good enthusiasts!
 2. Create a new branch  
 3. Make your changes  
 4. Submit a pull request
-
----
-
 
 ## 📄 License
 
