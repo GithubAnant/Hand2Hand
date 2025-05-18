@@ -2,6 +2,8 @@
 
 A community-driven mobile application that bridges the gap between **volunteers**, **NGOs**, and **resource donors** to ensure efficient distribution of resources like food, clothing, medicine, and more.
 
+Full Video Demo - [here](https://www.youtube.com/watch?v=sCJ4t4LdRHg)
+
 ##  Features
 
 -  **Geo-based Notifications**  
